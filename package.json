@@ -1,0 +1,65 @@
+{
+  "name": "docker-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that enables AI agents to interact with Docker containers locally or remotely via SSH. Provides comprehensive Docker management capabilities including container operations, logs, monitoring, and cleanup.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "docker-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "scripts/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docker",
+    "containers",
+    "ssh",
+    "remote-docker",
+    "ai-agent",
+    "docker-management",
+    "dockerode",
+    "devops"
+  ],
+  "author": {
+    "name": "Son Dang",
+    "url": "https://github.com/sondt2709"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sondt2709/docker-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondt2709/docker-mcp/issues"
+  },
+  "homepage": "https://github.com/sondt2709/docker-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "dockerode": "^4.0.7",
+    "dockerode-compose": "^1.4.0",
+    "ssh2": "^1.16.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^3.3.42",
+    "@types/node": "^20.19.7",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
